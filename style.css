@@ -1,0 +1,1765 @@
+/* font-family: "Arvo", serif; */
+/* font-family: "Bitter", serif; */
+
+/* Reset and Basic Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    color: #eadfdd;
+    overflow-x: hidden;
+
+}
+
+/* Background Video */
+.background-video {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+@media (max-width: 480px) {
+    .background-video {
+        height: 100vh; /* Make the video occupy the full viewport height */
+        width: 100vw; /* Ensure it spans the full viewport width */
+        object-fit: cover; /* Ensures the video covers the screen without distortion */
+    }
+}
+
+
+/* For tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .background-video {
+        height: 70vh; /* Slightly larger height for tablets */
+        object-fit: cover; /* Maintains aspect ratio */
+    }
+}
+
+/* For desktops (769px and above) */
+@media (min-width: 769px) {
+    .background-video {
+        height: 100vh; /* Full height for larger screens */
+        object-fit: cover; /* Covers the screen nicely */
+    }
+}
+header {
+    background: rgba(240, 237, 237, 0.1); /* Semi-transparent */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    backdrop-filter: blur(5px); /* Optional for a frosted glass effect */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 150px;
+}
+
+.beer-finder {
+    font-family: "Bitter", serif;
+    background-color: #f8e6d0;
+    color: #6e100f;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reservations {
+
+    display: flex;
+    align-items: center;
+}
+
+.res {
+    font-family: "Bitter", serif;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 1px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 20;
+}
+
+.sidebar a {
+    font-family: "Bitter", serif;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color:maroon;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #b30000;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    color: #6e100f;
+}
+.dropdown-btn {
+    display: block;
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    color: #333;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #800000; /* Matching color */
+    color: white;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+
+
+/* Media Queries */
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+    /* Header */
+    header {
+        padding: 5px 10px;
+    }
+
+    .header-container {
+    
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    /* Logo */
+    .logo {
+        transform: translate(-80px);
+        height: 80px;
+    }
+
+    /* Reservations Section */
+    .reservations {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .res {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 200px;
+        padding-top: 40px;
+    }
+
+    .sidebar a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+    .beer-finder{
+        display: none;
+    }
+}
+
+/* Tablet (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 10px 15px;
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Logo */
+    .logo {
+        height: 100px;
+    }
+
+    /* Reservations Section */
+    .reservations {
+        justify-content: flex-end;
+    }
+
+    .res {
+        font-size: 16px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 220px;
+        padding-top: 50px;
+    }
+
+    .sidebar a {
+        font-size: 17px;
+        padding: 10px 18px;
+    }
+}
+
+/* Desktop (769px and up) */
+@media (min-width: 769px) {
+    /* Header */
+    header {
+        padding: 10px 20px;
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Logo */
+    .logo {
+        height: 150px;
+    }
+
+    /* Reservations Section */
+    .reservations {
+        justify-content: space-between;
+    }
+
+    .res {
+        font-size: 18px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 250px;
+        padding-top: 60px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+
+
+
+/* Info Section with Brick Background */
+
+.container1 {
+    display: flex;
+    flex-direction: row; /* Ensure text and image are side by side */
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: url('img and video/bricks_bg.jpeg') center/cover no-repeat; /* Background image */
+    border-radius: 10px;
+    color: #fff; /* Ensure the text color contrasts with the background */
+}
+
+.text-container1 {
+    font-family: "Bitter", serif;
+    width: 45%; /* Adjust width for spacing */
+    text-align: left; /* Align text to the left */
+    color: #fff; /* Change to white for better contrast */
+}
+
+.title1 {
+    font-family: "Bitter", serif;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.subtitle1 {
+    font-family: "Arvo", serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.description1 {
+    font-family: "Arvo", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.know-more1 {
+    font-family: "Bitter", serif;
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #a00; /* Darker red for contrast */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.know-more1:hover {
+    background-color: #800; /* Darker shade on hover */
+}
+
+.image-container1 {
+    width: 45%; /* Adjust width for even spacing */
+}
+
+.image-container1 img {
+    width: 100%; /* Full width for responsiveness */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+css
+Copy code
+/* Container Styling */
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Text container styling */
+.text-container1 {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: slideInLeft 1.5s forwards;
+}
+
+/* Image container styling */
+.image-container1 {
+    flex: 1;
+    text-align: right;
+    opacity: 0;
+    transform: translateX(50%);
+    animation: slideInRight 1.5s forwards;
+}
+
+/* Keyframes for text container (from left) */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes for image container (from right) */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries */
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+    /* Container */
+    .container1 {
+        flex-direction: column; /* Stack text and image vertically */
+        padding: 20px 10px;
+    }
+
+    /* Text Container */
+    .text-container1 {
+        width: 100%;
+        text-align: center; /* Center-align text */
+        transform: translateX(0); /* Reset animation */
+    }
+
+    /* Image Container */
+    .image-container1 {
+        width: 100%;
+        margin-top: 20px; /* Space between text and image */
+        transform: translateX(0); /* Reset animation */
+    }
+
+    /* Title, Subtitle, and Description Font Sizes */
+    .title1 {
+        font-size: 32px;
+    }
+
+    .subtitle1 {
+        font-size: 20px;
+    }
+
+    .description1 {
+        font-size: 16px;
+    }
+
+    /* Button */
+    .know-more1 {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Tablet (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Container */
+    .container1 {
+        flex-direction: column; /* Stack text and image vertically */
+        padding: 30px 20px;
+    }
+
+    /* Text Container */
+    .text-container1 {
+        width: 100%;
+        text-align: center;
+        transform: translateX(0);
+    }
+
+    /* Image Container */
+    .image-container1 {
+        width: 100%;
+        margin-top: 20px;
+        transform: translateX(0);
+    }
+
+    /* Title, Subtitle, and Description Font Sizes */
+    .title1 {
+        font-size: 36px;
+    }
+
+    .subtitle1 {
+        font-size: 22px;
+    }
+
+    .description1 {
+        font-size: 16px;
+    }
+
+    /* Button */
+    .know-more1 {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+/* Desktop (769px and up) */
+@media (min-width: 769px) {
+    /* Container */
+    .container1 {
+        flex-direction: row; /* Side-by-side layout */
+        padding: 50px;
+    }
+
+    /* Text Container */
+    .text-container1 {
+        width: 45%;
+        text-align: left;
+        transform: translateX(-50%); /* Animation reset */
+    }
+
+    /* Image Container */
+    .image-container1 {
+        width: 45%;
+        transform: translateX(50%); /* Animation reset */
+    }
+
+    /* Title, Subtitle, and Description Font Sizes */
+    .title1 {
+        font-size: 48px;
+    }
+
+    .subtitle1 {
+        font-size: 24px;
+    }
+
+    .description1 {
+        font-size: 18px;
+    }
+
+    /* Button */
+    .know-more1 {
+        padding: 12px 25px;
+        font-size: 18px;
+    }
+}
+
+
+/* Beer Section Styles */
+.beer-section {
+    padding: 60px 20px;
+    text-align: center; /* Center text */
+    background-color: rgba(240, 227, 227, 0.8); /* Background color for contrast */
+    color: #fff; /* Text color */
+}
+
+.beer-title22 {
+    text-decoration: none;
+    font-family: "Bitter", serif;
+    color: #6e100f;
+    font-size: 48px; /* Big font size for title */
+    margin-bottom: 10px;
+}
+
+.beer-subtitle {
+    text-decoration: none;
+    font-family: "Arvo", serif;
+    color: black;
+    font-size: 24px; /* Subtitle font size */
+    margin-bottom: 30px; /* Space below subtitle */
+}
+
+.beer-gallery {
+    text-align: center;
+    display: flex; /* Use flexbox for layout */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 10px; /* Space around the gallery */
+}
+
+.beer-item {
+    text-decoration: none;
+    flex: 0 0 auto; /* Prevent flex items from growing */
+    margin-right: 20px; /* Space between beer items */
+    text-align: center; /* Center-align text under each beer */
+}
+
+.beer-img {
+    width: 150px; /* Set width for beer images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.beer-name {
+    text-decoration: none;
+    font-family: "Bitter", serif;
+    color:maroon;
+    margin-top: 10px; /* Space between image and name */
+    font-size: 18px; /* Font size for beer name */
+    display: block; /* Ensures the name is a block element */
+    text-align: center; /* Center text */
+}
+
+
+/* Media Queries */
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+    /* Beer Section */
+    .beer-section {
+        padding: 40px 10px;
+        text-align: center; /* Ensure center-aligned text on small screens */
+    }
+
+    /* Beer Title */
+    .beer-title22 {
+        font-size: 32px; /* Adjust title font size for mobile */
+    }
+
+    /* Beer Subtitle */
+    .beer-subtitle {
+        font-size: 18px; /* Smaller subtitle font */
+        margin-bottom: 20px; /* Reduced margin */
+    }
+
+    /* Beer Gallery */
+    .beer-gallery {
+        flex-direction: column; /* Stack beer items vertically */
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Beer Item */
+    .beer-item {
+        margin-right: 0;
+        margin-bottom: 20px; /* Space between beer items when stacked */
+    }
+
+    /* Beer Name */
+    .beer-name {
+        font-size: 16px; /* Smaller font size for beer names */
+    }
+
+    /* Beer Image */
+    .beer-img {
+        width: 120px; /* Smaller image size on mobile */
+    }
+}
+
+/* Tablet (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Beer Section */
+    .beer-section {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    /* Beer Title */
+    .beer-title22 {
+        font-size: 40px; /* Adjust font size */
+    }
+
+    /* Beer Subtitle */
+    .beer-subtitle {
+        font-size: 20px; /* Slightly larger font for subtitle */
+        margin-bottom: 25px; /* Slightly reduced space */
+    }
+
+    /* Beer Gallery */
+    .beer-gallery {
+        flex-direction: row; /* Arrange beer items in a row */
+        justify-content: center; /* Center items */
+    }
+
+    /* Beer Item */
+    .beer-item {
+        margin-right: 15px; /* Adjust space between items */
+    }
+
+    /* Beer Name */
+    .beer-name {
+        font-size: 16px; /* Font size adjustment */
+    }
+
+    /* Beer Image */
+    .beer-img {
+        width: 130px; /* Adjust image size */
+    }
+}
+
+/* Desktop (769px and up) */
+@media (min-width: 769px) {
+    /* Beer Section */
+    .beer-section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    /* Beer Title */
+    .beer-title22 {
+        font-size: 48px; /* Big font size for title */
+    }
+
+    /* Beer Subtitle */
+    .beer-subtitle {
+        font-size: 24px; /* Standard subtitle font size */
+        margin-bottom: 30px; /* Standard margin */
+    }
+
+    /* Beer Gallery */
+    .beer-gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: auto; /* Horizontal scroll for large screens */
+    }
+
+    /* Beer Item */
+    .beer-item {
+        margin-right: 20px; /* Space between items */
+    }
+
+    /* Beer Name */
+    .beer-name {
+        font-size: 18px; /* Font size for beer name */
+    }
+
+    /* Beer Image */
+    .beer-img {
+        width: 150px; /* Set image size for desktop */
+    }
+}
+
+/* Brewpubs & Taprooms Section */
+.brewpubs-section {
+    background-image: url('img and video/retro_bg.jpeg'); 
+    background-size: cover; /* Cover the section with the background image */
+    background-position: center; /* Center the background image */
+    padding: 60px 20px; /* Add padding */
+    color: #fff; /* Text color */
+    text-align: center; /* Center text */
+}
+
+.brewpubs-title {
+    font-family: "Bitter", serif;
+    font-size: 48px; /* Title font size */
+    margin-bottom: 10px;
+}
+
+.brewpubs-subtitle {
+    font-family: "Arvo", serif;
+    font-size: 24px; /* Subtitle font size */
+    margin-bottom: 30px; /* Space below subtitle */
+}
+
+.brewpubs-gallery {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items */
+    margin-bottom: 30px; /* Space below gallery */
+}
+
+.brewpub-item {
+    margin: 0 15px; /* Space between items */
+    text-align: center; /* Center-align text under each brewpub */
+    position: relative; /* For positioning of the button */
+    border: 2px solid rgb(173, 155, 155);
+    background-color: #f4f4f4; /* White border around items */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    bottom: 10px; /* Padding inside the item */
+    
+}
+
+.brewpub-img {
+    width: 250px; /* Set width for brewpub images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.brewpub-name {
+    font-family: "Bitter", serif;
+    color: #6e100f;
+    margin-top: 10px; /* Space between image and name */
+    font-size: 18px; /* Font size for brewpub name */
+    display: flex; /* Use flex for icon and text alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.brewpub-icon {
+    width: 30px; /* Set width for small icon */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Hide section initially */
+/* .hidden-on-load {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Visible state */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+} 
+
+/* Media Queries */
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+    /* Brewpubs Section */
+    .brewpubs-section {
+        padding: 40px 10px;
+        background-size: cover;
+    }
+
+    /* Brewpubs Title */
+    .brewpubs-title {
+        font-size: 32px; /* Smaller font size for mobile */
+    }
+
+    /* Brewpubs Subtitle */
+    .brewpubs-subtitle {
+        font-size: 18px; /* Adjust font size for readability */
+        margin-bottom: 20px;
+    }
+
+    /* Brewpubs Gallery */
+    .brewpubs-gallery {
+        flex-direction: column; /* Stack items vertically */
+        margin-bottom: 20px;
+    }
+
+    /* Brewpub Item */
+    .brewpub-item {
+        margin: 0 0 20px 0; /* Margin adjustments for stacked items */
+        padding: 10px;
+    }
+
+    /* Brewpub Image */
+    .brewpub-img {
+        width: 150px; /* Smaller image size */
+    }
+
+    /* Brewpub Name */
+    .brewpub-name {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    /* Brewpub Icon */
+    .brewpub-icon {
+        width: 24px; /* Smaller icon */
+        margin-right: 5px;
+    }
+}
+
+/* Tablet (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Brewpubs Section */
+    .brewpubs-section {
+        padding: 50px 15px;
+        background-size: cover;
+    }
+
+    /* Brewpubs Title */
+    .brewpubs-title {
+        font-size: 40px; /* Adjusted font size for tablet */
+    }
+
+    /* Brewpubs Subtitle */
+    .brewpubs-subtitle {
+        font-size: 20px; /* Slightly larger subtitle font */
+        margin-bottom: 25px;
+    }
+
+    /* Brewpubs Gallery */
+    .brewpubs-gallery {
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: center;
+    }
+
+    /* Brewpub Item */
+    .brewpub-item {
+        margin: 10px; /* Space items out */
+    }
+
+    /* Brewpub Image */
+    .brewpub-img {
+        width: 200px; /* Medium size image */
+    }
+
+    /* Brewpub Name */
+    .brewpub-name {
+        font-size: 17px; /* Slightly larger font */
+    }
+
+    /* Brewpub Icon */
+    .brewpub-icon {
+        width: 28px;
+        margin-right: 6px;
+    }
+}
+
+/* Desktop (769px and up) */
+@media (min-width: 769px) {
+    /* Brewpubs Section */
+    .brewpubs-section {
+        padding: 60px 20px;
+    }
+
+    /* Brewpubs Title */
+    .brewpubs-title {
+        font-size: 48px; /* Full size for larger screens */
+    }
+
+    /* Brewpubs Subtitle */
+    .brewpubs-subtitle {
+        font-size: 24px; /* Standard font size */
+        margin-bottom: 30px;
+    }
+
+    /* Brewpubs Gallery */
+    .brewpubs-gallery {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+
+    /* Brewpub Item */
+    .brewpub-item {
+        margin: 0 15px; /* Spacing for desktop layout */
+    }
+
+    /* Brewpub Image */
+    .brewpub-img {
+        width: 250px; /* Full size image */
+    }
+
+    /* Brewpub Name */
+    .brewpub-name {
+        font-size: 18px;
+    }
+
+    /* Brewpub Icon */
+    .brewpub-icon {
+        width: 30px;
+        margin-right: 8px;
+    }
+}
+
+
+/* Toit Everywhere Section */
+.toit-everywhere-section {
+    background-image: url('img and video/Mask-Group-34.jpg'); /* Background image */
+    background-size: cover; /* Cover the section with the background image */
+    background-position: center; /* Center the background image */
+    padding: 60px 20px; /* Padding */
+    color: #fff; /* Text color */
+    text-align: center; /* Center text */
+}
+
+.toit-title {
+    font-family: "Bitter", serif;
+    color: #6e100f; /* Title color */
+    font-size: 48px; /* Title font size */
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.toit-subtitle {
+    font-family: "Arvo", serif;
+    color: black; /* Subtitle color */
+    font-size: 24px; /* Subtitle font size */
+    margin-bottom: 30px; /* Space below subtitle */
+}
+
+.toit-gallery {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items */
+    margin-bottom: 30px; /* Space below gallery */
+}
+
+.toit-item {
+    margin: 0 15px; /* Space between items */
+    text-align: center; /* Center-align text under each item */
+    position: relative; /* For positioning of the icon */
+    border: 2px solid rgb(173, 155, 155); /* Border around items */
+    background-color: #f4f4f4; /* Background color for boxes */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the item */
+}
+
+.toit-img {
+    width: 500px; /* Set width for beer images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.toit-name {
+    font-family: "Bitter", serif;
+    color: #6e100f; /* Name color */
+    margin-top: 10px; /* Space between image and name */
+    font-size: 18px; /* Font size for beer name */
+    display: flex; /* Use flex for icon and text alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.toit-icon {
+    width: 30px; /* Set width for small icon */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.toit-content {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align items horizontally */
+    text-align: center; /* Center text */
+}
+
+.beer-finder-btn {
+    font-family: "Bitter", serif;
+    background-color: #f8e6d0; /* Button color */
+    color: #6e100f; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 20px; /* Rounded corners */
+    border: none; /* No border */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold; /* Bold text */
+    margin-top: 30px; /* Space above button */
+    display: block; /* Ensures it's treated as a block element */
+    /* Additional margin to ensure it is centered properly */
+    margin-left: auto; /* Centering with margin */
+    margin-right: auto; /* Centering with margin */
+}
+
+
+/* Media Queries */
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+    /* Toit Everywhere Section */
+    .toit-everywhere-section {
+        padding: 40px 10px;
+        background-size: cover;
+    }
+
+    /* Title */
+    .toit-title {
+        font-size: 32px; /* Reduce title font size */
+    }
+
+    /* Subtitle */
+    .toit-subtitle {
+        font-size: 18px; /* Adjust subtitle font size */
+        margin-bottom: 20px;
+    }
+
+    /* Gallery */
+    .toit-gallery {
+        flex-direction: column; /* Stack items vertically */
+        margin-bottom: 20px;
+    }
+
+    /* Toit Item */
+    .toit-item {
+        margin: 0 0 20px 0; /* Adjust margin for stacking */
+        padding: 10px;
+    }
+
+    /* Toit Image */
+    .toit-img {
+        width: 100%; /* Full width for better fit */
+    }
+
+    /* Name */
+    .toit-name {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    /* Icon */
+    .toit-icon {
+        width: 24px; /* Smaller icon */
+        margin-right: 5px;
+    }
+
+    /* Beer Finder Button */
+    .beer-finder-btn {
+        font-size: 14px; /* Smaller button font size */
+        padding: 8px 16px;
+    }
+}
+
+/* Tablet (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Toit Everywhere Section */
+    .toit-everywhere-section {
+        padding: 50px 15px;
+    }
+
+    /* Title */
+    .toit-title {
+        font-size: 40px; /* Medium font size */
+    }
+
+    /* Subtitle */
+    .toit-subtitle {
+        font-size: 20px; /* Slightly larger subtitle font */
+        margin-bottom: 25px;
+    }
+
+    /* Gallery */
+    .toit-gallery {
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: center;
+    }
+
+    /* Toit Item */
+    .toit-item {
+        margin: 10px; /* Space items out */
+    }
+
+    /* Toit Image */
+    .toit-img {
+        width: 250px; /* Medium size for images */
+    }
+
+    /* Name */
+    .toit-name {
+        font-size: 17px; /* Slightly larger font */
+    }
+
+    /* Icon */
+    .toit-icon {
+        width: 28px;
+        margin-right: 6px;
+    }
+
+    /* Beer Finder Button */
+    .beer-finder-btn {
+        font-size: 15px; /* Adjust button font size */
+        padding: 9px 18px;
+    }
+}
+
+/* Desktop (769px and up) */
+@media (min-width: 769px) {
+    /* Toit Everywhere Section */
+    .toit-everywhere-section {
+        padding: 60px 20px;
+    }
+
+    /* Title */
+    .toit-title {
+        font-size: 48px; /* Full size for larger screens */
+    }
+
+    /* Subtitle */
+    .toit-subtitle {
+        font-size: 24px; /* Standard font size */
+        margin-bottom: 30px;
+    }
+
+    /* Gallery */
+    .toit-gallery {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+
+    /* Toit Item */
+    .toit-item {
+        margin: 0 15px; /* Spacing for desktop layout */
+    }
+
+    /* Toit Image */
+    .toit-img {
+        width: 500px; /* Full size image */
+    }
+
+    /* Name */
+    .toit-name {
+        font-size: 18px;
+    }
+
+    /* Icon */
+    .toit-icon {
+        width: 30px;
+        margin-right: 8px;
+    }
+
+    /* Beer Finder Button */
+    .beer-finder-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+
+.footer-section {
+    background-color: #720000;
+    /* padding: 40px 20px; */
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.newsletter {
+    margin-bottom: 30px;
+}
+
+.newsletter-title {
+    font-family: "Arvo", serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.newsletter-input {
+    padding: 10px;
+    width: 250px;
+    max-width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    margin-right: 10px;
+    color: #7a0000;
+}
+
+.newsletter-button {
+    font-family: "Bitter", serif;
+    background-color: #ffffff;
+    color: #7a0000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.footer-content div {
+    margin: 10px;
+    max-width: 200px;
+}
+
+.beer-title, .restaurant-title, .company-title, .contact-title {
+    font-family: "Bitter", serif;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.beer1, .beer2, .beer3, .beer4, .beer5, .beer6, .beer7,
+.restaurant1, .restaurant2, .restaurant3, .restaurant4, .restaurant5, .restaurant6,
+.company1, .company2, .company3, .company4, .company5, .company6, .company7, .company8,
+.contact1, .contact2, .contact3, .contact4, .contact5, .contact6, .contact7, .contact8 {
+    font-size: 14px;
+    font-family: "Arvo", serif;
+    margin: 5px 0;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content p a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-content p a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-bottom a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #ffcc00;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.brewery-tour {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: adds a semi-transparent background for readability */
+    border-radius: 8px;
+}
+
+.brewery-tour-button {
+    font-family: "Bitter", serif;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffcc00; /* Adjust the color as needed */
+    color: #333; /* Adjust the color as needed */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Centered Heading */
+.centered-heading {
+    font-family: "Bitter", serif;
+    text-align: center;
+    font-size: 2em;
+    color: #e0d6d5; /* Example color, adjust as needed */
+    margin-bottom: 20px;
+}
+
+/* Layout for Info Section */
+.info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    /* background-color: #f4f4f4; Optional background color */
+}
+
+/* Left Text Styling */
+.left-text {
+    font-family: "Bitter", serif;
+    text-align: center;
+    max-width: 400px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.know-more-btn:hover {
+    background-color: #6b1a0a;
+}
+
+/* Image Row Styling */
+.image-row {
+    display: flex;
+    gap: 15px; /* Adjust gap between images */
+    justify-content: center;
+}
+
+.small-img {
+    width: 150px; /* Adjust image width as needed */
+    height: auto;
+    border-radius: 5px; /* Optional: Adds a slight border radius to images */
+}
+.blog-post {
+    background-color: #FCFBE3;
+    display: flex;
+    flex-wrap: nowrap;  /* Don't allow wrapping, force items to be in a single row */
+    justify-content: space-between;
+    gap: 20px; /* Add gap between blog posts */
+}
+
+.post {
+    flex: 0 0 22%; /* Set a fixed width for each post (make them smaller) */
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text inside each post */
+}
+
+.post h2 {
+
+    font-family: "Bitter", serif;
+    color: black;
+    font-size: 16px; /* Adjust font size */
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-family: "Arvo", serif;
+    color: black;
+    font-size: 12px; /* Make the text a bit smaller */
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    font-family: "Arvo", serif;
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.post-image {
+    width: 100%; /* Ensure the image takes up full width of the post */
+    height: auto; /* Maintain image aspect ratio */
+    max-height: 150px; /* Limit the height of the images to keep them small */
+    margin-bottom: 15px; /* Space between image and text */
+    border-radius: 5px;
+}
+.footer1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: maroon;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.copyright1, .powered-by1, .social-icons1 {
+    font-family: "Arvo", serif;
+    font-size: 12px;
+    margin: 0;
+}
+
+.powered-by1 a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.social-icons1 {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.social-icon1 img {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon1 img:hover {
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+.featured-image {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.featured-img {
+    max-width: 100%;
+    height: auto;
+}
+/* Media Queries */
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+    /* Footer Section */
+    .footer-section {
+        padding: 10px 15px;
+    }
+
+    /* Newsletter */
+    .newsletter-title {
+        font-size: 20px; /* Adjust title font size */
+    }
+
+    .newsletter-input {
+        width: 200px; /* Adjust width for smaller screens */
+        padding: 8px;
+    }
+
+    .newsletter-button {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 14px;
+    }
+
+    /* Footer Content */
+    .footer-content {
+        flex-direction: column; /* Stack footer content vertically */
+        text-align: center; /* Center text for small screens */
+    }
+
+    .footer-content div {
+        max-width: 100%; /* Ensure items take up full width */
+        margin: 10px 0;
+    }
+
+    .footer-bottom {
+        font-size: 10px; /* Smaller font size */
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons a {
+        font-size: 16px; /* Smaller icon size */
+        margin: 0 8px;
+    }
+
+    /* Brewery Tour */
+    .brewery-tour-button {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 14px;
+    }
+
+    .image-row {
+        flex-direction: column; /* Stack images vertically */
+    }
+
+    .small-img {
+        width: 120px; /* Adjust image width */
+    }
+
+    /* Blog Post */
+    .blog-post {
+        flex-direction: column; /* Stack blog posts vertically */
+        gap: 15px;
+    }
+
+    .post {
+        width: 100%; /* Full width for posts */
+    }
+
+    .post h2 {
+        font-size: 14px;
+    }
+
+    .post p {
+        font-size: 10px;
+    }
+
+    .read-more {
+        font-size: 10px;
+    }
+
+    .post-image {
+        max-height: 120px; /* Limit image height */
+    }
+}
+
+/* Tablet (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Footer Section */
+    .footer-section {
+        padding: 20px 25px;
+    }
+
+    /* Newsletter */
+    .newsletter-title {
+        font-size: 22px;
+    }
+
+    .newsletter-input {
+        width: 220px;
+        padding: 9px;
+    }
+
+    .newsletter-button {
+        padding: 9px 18px;
+        font-size: 15px;
+    }
+
+    /* Footer Content */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content div {
+        margin: 10px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        margin: 0 12px;
+    }
+
+    /* Brewery Tour */
+    .brewery-tour-button {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .image-row {
+        gap: 20px;
+    }
+
+    .small-img {
+        width: 140px;
+    }
+
+    /* Blog Post */
+    .blog-post {
+        flex-wrap: wrap;
+    }
+
+    .post {
+        width: 48%; /* Two posts per row */
+    }
+
+    .post h2 {
+        font-size: 15px;
+    }
+
+    .post p {
+        font-size: 11px;
+    }
+
+    .read-more {
+        font-size: 11px;
+    }
+
+    .post-image {
+        max-height: 140px;
+    }
+}
+
+/* Desktop (769px and up) */
+@media (min-width: 769px) {
+    /* Footer Section */
+    .footer-section {
+        padding: 30px 40px;
+    }
+
+    /* Newsletter */
+    .newsletter-title {
+        font-size: 24px;
+    }
+
+    .newsletter-input {
+        width: 250px;
+    }
+
+    .newsletter-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    /* Footer Content */
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .footer-content div {
+        margin: 10px;
+        max-width: 200px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin: 0 15px;
+    }
+
+    /* Brewery Tour */
+    .brewery-tour-button {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+
+    .image-row {
+        gap: 25px;
+    }
+
+    .small-img {
+        width: 150px;
+    }
+
+    /* Blog Post */
+    .blog-post {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .post {
+        flex: 0 0 22%; /* Set a fixed width for each post */
+    }
+
+    .post h2 {
+        font-size: 16px;
+    }
+
+    .post p {
+        font-size: 12px;
+    }
+
+    .read-more {
+        font-size: 12px;
+    }
+
+    .post-image {
+        max-height: 150px;
+    }
+}
+
+
+
+
+
+
+

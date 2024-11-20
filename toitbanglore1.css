@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    color: #eadfdd;
+    overflow-x: hidden;
+}
+header {
+    background: rgba(240, 237, 237, 0.1); /* Semi-transparent */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    backdrop-filter: blur(5px); /* Optional for a frosted glass effect */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 150px;
+}
+
+.beer-finder {
+    font-family: "Bitter", serif;
+    background-color: #f8e6d0;
+    color: #6e100f;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reservations {
+
+    display: flex;
+    align-items: center;
+}
+
+.res {
+    font-family: "Bitter", serif;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 1px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 20;
+}
+
+.sidebar a {
+    font-family: "Bitter", serif;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color:maroon;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #b30000;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    color: #6e100f;
+}
+.dropdown-btn {
+    display: block;
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    color: #333;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #800000; /* Matching color */
+    color: white;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+.container1 {
+    display: flex;
+    flex-direction: row; /* Ensure text and image are side by side */
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: url('img and video/Mask-Group-34.jpg') center/cover no-repeat; /* Background image */
+    border-radius: 10px;
+    color: #fff; /* Ensure the text color contrasts with the background */
+}
+
+.text-container1 {
+    font-family: "Bitter", serif;
+    width: 45%; /* Adjust width for spacing */
+    text-align: left; /* Align text to the left */
+    color: #fff; /* Change to white for better contrast */
+}
+
+.title1 {
+    color: #720000;
+    font-family: "Bitter", serif;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.subtitle1 {
+    color: #212529;
+    font-family: "Arvo", serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.description1 {
+    color: #212529;
+    font-family: "Arvo", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.know-more1 {
+    font-family: "Bitter", serif;
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #a00; /* Darker red for contrast */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.know-more1:hover {
+    background-color: #800; /* Darker shade on hover */
+}
+
+.image-container1 {
+    width: 45%; /* Adjust width for even spacing */
+}
+
+.image-container1 img {
+    width: 100%; /* Full width for responsiveness */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+css
+Copy code
+/* Container Styling */
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Text container styling */
+.text-container1 {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: slideInLeft 1.5s forwards;
+}
+
+/* Image container styling */
+.image-container1 {
+    flex: 1;
+    text-align: right;
+    opacity: 0;
+    transform: translateX(50%);
+    animation: slideInRight 1.5s forwards;
+}
+
+/* Keyframes for text container (from left) */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes for image container (from right) */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.container3 {
+    display: flex;
+    gap: 20px;
+}
+.image-container3 img {
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+}
+.info-container3 {
+    font-family: "Bitter", serif;
+    color: #720000;
+    max-width: 400px;
+}
+.info-container3 h2, .info-container3 h3, .info-container3 p {
+    margin: 10px 0;
+}
+.info-container3 h2 {
+    color: #800000;
+}
+.info-container3 a {
+    color: #f8e6d0;
+    text-decoration: none;
+}
+.buttons3 {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+}
+.button3 {
+    font-family: "Bitter", serif;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#720000;
+    color: #eadfdd;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+.button3 .icon {
+    margin-left: 5px;
+}
+.note3 {
+    font-family: "Bitter", serif;
+    color: #212529;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.beer-section {
+    padding: 60px 20px;
+    text-align: center; /* Center text */
+    background-color: rgba(240, 227, 227, 0.8); /* Background color for contrast */
+    color: #fff; /* Text color */
+}
+
+.beer-title22 {
+    text-decoration: none;
+    font-family: "Bitter", serif;
+    color: #6e100f;
+    font-size: 48px; /* Big font size for title */
+    margin-bottom: 10px;
+}
+
+.beer-subtitle {
+    text-decoration: none;
+    font-family: "Arvo", serif;
+    color: black;
+    font-size: 24px; /* Subtitle font size */
+    margin-bottom: 30px; /* Space below subtitle */
+}
+
+.beer-gallery {
+    text-align: center;
+    display: flex; /* Use flexbox for layout */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 10px; /* Space around the gallery */
+}
+
+.beer-item {
+    text-decoration: none;
+    flex: 0 0 auto; /* Prevent flex items from growing */
+    margin-right: 20px; /* Space between beer items */
+    text-align: center; /* Center-align text under each beer */
+}
+
+.beer-img {
+    width: 150px; /* Set width for beer images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.beer-name {
+    text-decoration: none;
+    font-family: "Bitter", serif;
+    color:maroon;
+    margin-top: 10px; /* Space between image and name */
+    font-size: 18px; /* Font size for beer name */
+    display: block; /* Ensures the name is a block element */
+    text-align: center; /* Center text */
+}
+
+.footer-section {
+    background-color: #720000;
+    /* padding: 40px 20px; */
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.newsletter {
+    margin-bottom: 30px;
+}
+
+.newsletter-title {
+    font-family: "Arvo", serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.newsletter-input {
+    padding: 10px;
+    width: 250px;
+    max-width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    margin-right: 10px;
+    color: #7a0000;
+}
+
+.newsletter-button {
+    font-family: "Bitter", serif;
+    background-color: #ffffff;
+    color: #7a0000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.footer-content div {
+    margin: 10px;
+    max-width: 200px;
+}
+
+.beer-title, .restaurant-title, .company-title, .contact-title {
+    font-family: "Bitter", serif;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.beer1, .beer2, .beer3, .beer4, .beer5, .beer6, .beer7,
+.restaurant1, .restaurant2, .restaurant3, .restaurant4, .restaurant5, .restaurant6,
+.company1, .company2, .company3, .company4, .company5, .company6, .company7, .company8,
+.contact1, .contact2, .contact3, .contact4, .contact5, .contact6, .contact7, .contact8 {
+    font-size: 14px;
+    font-family: "Arvo", serif;
+    margin: 5px 0;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content p a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-content p a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-bottom a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #ffcc00;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.brewery-tour {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: adds a semi-transparent background for readability */
+    border-radius: 8px;
+}
+
+.brewery-tour-button {
+    font-family: "Bitter", serif;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffcc00; /* Adjust the color as needed */
+    color: #333; /* Adjust the color as needed */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Centered Heading */
+.centered-heading {
+    font-family: "Bitter", serif;
+    text-align: center;
+    font-size: 2em;
+    color: #e0d6d5; /* Example color, adjust as needed */
+    margin-bottom: 20px;
+}
+
+/* Layout for Info Section */
+.info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    /* background-color: #f4f4f4; Optional background color */
+}
+
+/* Left Text Styling */
+.left-text {
+    font-family: "Bitter", serif;
+    text-align: center;
+    max-width: 400px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.know-more-btn:hover {
+    background-color: #6b1a0a;
+}
+.footer1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: maroon;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.copyright1, .powered-by1, .social-icons1 {
+    font-family: "Arvo", serif;
+    font-size: 12px;
+    margin: 0;
+}
+
+.powered-by1 a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.social-icons1 {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.social-icon1 img {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon1 img:hover {
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+.featured-image {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.featured-img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+

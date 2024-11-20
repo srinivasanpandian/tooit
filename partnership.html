@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="partnership.css">
+    <title>Partnerships</title>
+</head>
+<body>
+     <!-- Header Section -->
+     <header>
+        <nav class="header-container" aria-label="Main Navigation">
+            <!-- Beer Finder Button -->
+            <a href="https://toit.in/beer-finders/" target="_blank">
+                <button class="beer-finder" aria-label="Find Beer Near You">BEER FINDER</button>
+            </a>
+            
+
+            <!-- Center Logo -->
+            <img src="img and video/TO-Logo-CI-300-x-300-1.png" alt="Toit Logo" class="logo">
+
+            <!-- Reservations Section -->
+            <div class="reservations">
+                <span class="res">RESERVATIONS</span>
+                <div class="menu-icon" onclick="toggleMenu()" aria-label="Open Sidebar Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+     <!-- Sidebar Menu -->
+     <div id="sidebar" class="sidebar" aria-label="Sidebar Navigation">
+        <button class="closebtn" onclick="toggleMenu()" aria-label="Close Sidebar Menu">&times;</button>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown('beer-dropdown')">Beer ▼</button>
+            <div id="beer-dropdown" class="dropdown-content">
+                <a href="tint-in.html">Tint-In-Wit</a>
+                <a href="nitro.html">Nitro Stout</a>
+                <a href="basamati.html">Basmati Blonde</a>
+                <a href="hefeweizen.html">Hefeweizen</a>
+                <a href="redale.html">Red Ale</a>
+                <a href="indianpaleale.html">Indian Pale Ale</a>
+                <a href="toitlarger.html">Toit Lager</a>
+            </div>
+        </div>
+        <a href="cider.html">Cider</a>
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown('beer-dropdown1')">Brepups & Taprooms ▼</button>
+            <div id="beer-dropdown1" class="dropdown-content">
+                <a href="toitbanglore1.html">Bangalore 1</a>
+                <a href="toitbanglore2.html">Banglore 2</a>
+                <a href="mumbai.html">Mumbai</a>
+                <a href="pune.html">Pune</a>
+            </div>
+        </div>
+        <a href="">Breweries</a>
+        <a href="partnership.html">Partnerships</a>
+        <a href="blog.html">Blog</a>
+        <a href="">Brewery Tour</a>
+        <a href="#"></a>
+        <!-- Add more links as necessary -->
+    </div>
+    <section>
+        <div>
+            <img src="img and video/partner-banner.jpg" alt="pizza" width="100%" height="100%">
+        </div>
+    </section>
+    <section class="container1">
+        <div class="text-container1">
+            <h1 class="title1">TOIT X BFC</h1>
+            <p class="subtitle1"></p>
+            <p class="description1">
+                Come by. Try everything twice. <br>
+                Learn, love, linger, stagger, slur, whatever. <br>
+                We are Toit. You should be too.
+            </p>
+            <!-- <a href="about.html" class="know-more1">KNOW MORE</a> -->
+        </div>
+        <div class="image-container1">
+            <img src="img and video/bfc.png" alt="Toit Brewpub">
+        </div>
+    </section>
+    <section class="activities-section">
+        <h2 class="activities-title">ACTIVITIES</h2>
+        <p class="pub">What BFC and Toit got up to together.</p>
+        <div class="activities-container">
+            <div class="activity-card">
+                <img src="img and video/luru.png" alt="Luru Lingo">
+                <h4>Luru Lingo</h4>
+                <p class="pub">Our dictionary and guide to some of the most popular Bengaluru phrases and words.</p>
+                <a href="#" class="register-button">REGISTER NOW</a>
+            </div>
+            <div class="activity-card">
+                <img src="img and video/pub.png" alt="Pub Quiz">
+                <h4>Pub Quiz</h4>
+                <p class="pub">A classic pub quiz – with a little more Toit and a lot more football.</p>
+                <a href="#" class="register-button">REGISTER NOW</a>
+            </div>
+            <div class="activity-card">
+                <img src="img and video/bfc.png" alt="Tifo Cup">
+                <h4>Tifo Cup</h4>
+                <p class="pub">The hunt for the best fan-made banners in support of the Blues.</p>
+                <a href="#" class="register-button">REGISTER NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <!-- <img src="img and video/bo.png" alt="Featured Image" class="featured-img"> -->
+        <div class="newsletter">
+            <h2 class="newsletter-title">DOWNLOAD NEWSLETTER</h2>
+            <input type="email" class="newsletter-input" placeholder="Email Address">
+            <button class="newsletter-button">DOWNLOAD</button>
+        </div>
+        <div class="footer-content">
+            <div class="beer">
+                <h3 class="beer-title">BEER</h3>
+                <p class="beer1"><a href="nitro.html">Nitro Stout</a></p>
+                <p class="beer2"><a href="indianpaleale.html">India Pale Ale</a></p>
+                <p class="beer3"><a href="tint-in.html">Tint-In-Wit</a></p>
+                <p class="beer4"><a href="basamati.html">Basmati Blonde</a></p>
+                <p class="beer5"><a href="redale.html">Red Ale</a></p>
+                <p class="beer6"><a href="hefeweizen.html">Hefeweizen</a></p>
+                <p class="beer7"><a href="toitlarger.html">Toit Lagerer</a></p>
+            </div>
+            
+            <div class="restaurants">
+                <h3 class="restaurant-title">RESTAURANTS</h3>
+                <p><a href="toitbanglore2.html">Toit Bangalore - Mahadevapura</a></p>
+                <p><a href="toitbanglore1.html">Toit Bangalore - Indiranagar</a></p>
+                <p><a href="pune.html">Toit Pune</a></p>
+                <p><a href="mumbai.html">Toit Mumbai</a></p>
+                <p><a href="https://toit.in/beer-finders/">BEER FINDER</a></p>
+                <p><a href="https://toit.in/breweries/">BREWERY TOUR</a></p>
+            </div>
+            <div class="company">
+                <h3 class="company-title">COMPANY</h3>
+                <p class="company1">About</p>
+                <p class="company2">Food</p>
+                <p class="company3">Breweries</p>
+                <p class="company4">Partnerships</p>
+                <p class="company5">Partner Bars & MRP Stores</p>
+                <p class="company6">Blog</p>
+                <p class="company7">Contact</p>
+                <p class="company8">Privacy</p>
+            </div>
+            <div class="contact">
+                <h3 class="contact-title">CONTACT</h3>
+                <p class="contact1">TOIT BANGALORE - MAHADEVAPURA</p>
+                <p class="contact2">Email: toitblr.east@toit.in</p>
+                <p class="contact3">TOIT BANGALORE - INDIRANAGAR</p>
+                <p class="contact4">Email: toitblr@toit.in</p>
+                <p class="contact5">TOIT PUNE</p>
+                <p class="contact6">Email: toitpune@toit.in</p>
+                <p class="contact7">TOIT MUMBAI</p>
+                <p class="contact8">Email: toitmumbai@toit.in</p>
+            </div>
+        </div>
+        
+    </section>
+    <footer class="footer1">
+        <div class="copyright1">
+            © Copyright 2023 www.toit.in
+        </div>
+        <div class="powered-by1">
+            Powered by <a href="#">Analyse Digital</a>
+        </div>
+        <div class="social-icons1">
+            <a href="#" class="social-icon1">
+                <img src="img and video/facebook.png" alt="Facebook Icon">
+            </a>
+            <a href="#" class="social-icon1">
+                <img src="img and video/x.png" alt="Twitter Icon">
+            </a>
+            <a href="#" class="social-icon1">
+                <img src="img and video/instagram.png" alt="Instagram Icon">
+            </a>
+            <a href="#" class="social-icon1">
+                <img src="img and video/youtube.png" alt="YouTube Icon">
+            </a>
+            <a href="#" class="social-icon1">
+                <img src="img and video/linkedin.png" alt="LinkedIn Icon">
+            </a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</html>

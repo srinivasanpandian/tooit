@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tint-in.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="header-container" aria-label="Main Navigation">
+            <!-- Beer Finder Button -->
+            <button class="beer-finder" aria-label="Find Beer Near You">BEER FINDER</button>
+
+            <!-- Center Logo -->
+            <img src="img and video/TO-Logo-CI-300-x-300-1.png" alt="Toit Logo" class="logo">
+
+            <!-- Reservations Section -->
+            <div class="reservations">
+                <span class="res">RESERVATIONS</span>
+                <div class="menu-icon" onclick="toggleMenu()" aria-label="Open Sidebar Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div id="sidebar" class="sidebar" aria-label="Sidebar Navigation">
+            <button class="closebtn" onclick="toggleMenu()" aria-label="Close Sidebar Menu">&times;</button>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown('beer-dropdown')">Beer ▼</button>
+                <div id="beer-dropdown" class="dropdown-content">
+                    <a href="tint-in.html">Tint-In-Wit</a>
+                    <a href="nitro.html">Nitro Stout</a>
+                    <a href="basamati.html">Basmati Blonde</a>
+                    <a href="hefeweizen.html">Hefeweizen</a>
+                    <a href="redale.html">Red Ale</a>
+                    <a href="indianpaleale.html">Indian Pale Ale</a>
+                    <a href="toitlarger.html">Toit Lager</a>
+                </div>
+            </div>
+            <a href="cider.html">Cider</a>
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown('beer-dropdown1')">Brepups & Taprooms ▼</button>
+                <div id="beer-dropdown1" class="dropdown-content">
+                    <a href="toitbanglore1.html">Bangalore 1</a>
+                    <a href="toitbanglore2.html">Banglore 2</a>
+                    <a href="mumbai.html">Mumbai</a>
+                    <a href="pune.html">Pune</a>
+                </div>
+            </div>
+            <a href="">Breweries</a>
+            <a href="partnership.html">Partnerships</a>
+            <a href="blog.html">Blog</a>
+            <a href="">Brewery Tour</a>
+            <a href="#"></a>
+            <!-- Add more links as necessary -->
+        </div>
+    </header>
+    
+    <section>
+        <div class="bc">
+             <img src="img and video/Group-681-1-1.jpg" width="100%">
+        
+    </section>
+    <section class="tint-section">
+        <!-- Image of Tint-In-Wit Bottle and Glass -->
+        <div class="tint-image">
+            <img src="img and video/b7.png" alt="Toit Tint-In-Wit">
+        </div>
+
+        <!-- Tint Description Text -->
+        <div class="tint-description">
+            <h1>TOIT LARGER</h1>
+            <h2>Belgian Witbier</h2>
+            <p>
+                An extremely popular beer style that almost faded away in the 1940s, partially because of the Lager revolution and World Wars. 
+                The style was revived in the 1960s and 1970s, and many versions of the beer are brewed in various parts of the world today.
+            </p>
+            <p>
+                The Tint-In-Wit is our refreshing, Belgian-style fruity ale and our most popular beer. It is made from Pilsner malt and locally sourced 
+                unmalted Indian wheat. A classic Belgian Wit with a tint in it.
+            </p>
+            <p>
+                This beer is also infused with local coriander and fresh orange peel, giving it a spicy-sweet, citrusy taste, making it not only refreshing 
+                but also a very easy and sessionable beer.
+            </p>
+
+            <div class="tint-details">
+                <div class="tint-width">
+                    <h3>ABV</h3>
+                    <p>4.6%</p>
+                </div>
+                <div class="tint-width">
+                    <h3>Appearance</h3>
+                    <p>Very pale straw to very light gold in color. The beer is very cloudy from starch haze and/or yeast, which gives it a milky, whitish-yellow appearance.</p>
+                </div>
+                <div class="tint-width">
+                    <h3>Mouthfeel</h3>
+                    <p>Medium-light to medium body, having a smooth and light creaminess.</p>
+                </div>
+                <div class="tint-width">
+                    <h3>Flavour</h3>
+                    <p>Pleasant sweetness and a zesty, orange-citrusy fruitiness and hint of coriander.</p>
+                </div>
+                <div class="tint-width">
+                    <h3>Aroma</h3>
+                    <p>Moderate coriander aroma, zesty, orangey fruitiness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <!-- Background Video -->
+    <video autoplay muted loop class="background-video" aria-hidden="true">
+        <source src="img and video/bottle+footage+out+2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </section>
+    <section class="toit-everywhere-section">
+        <div class="toit-content">
+            <h1 class="toit-title">Get Toit Everywhere</h1>
+            <h2 class="toit-subtitle">Toit beer is available in our partner bars and at an MRP store near you.</h2>
+            <div class="toit-gallery">
+                <div class="toit-item">
+                    <img src="img and video/Home-Page-Get-Toit-Everywhere-598-348.png" alt="Beer 1" class="toit-img">
+                    <span class="toit-name">
+                        <img src="img and video/next-theme.png" alt="Icon" class="toit-icon"> Partner Bars
+                    </span>
+                </div>
+                <div class="toit-item">
+                    <img src="img and video/MRP-Stores-598-348.png" alt="Beer 2" class="toit-img">
+                    <span class="toit-name">
+                        <img src="img and video/next-theme.png" alt="Icon" class="toit-icon"> MRP Stores
+                    </span>
+                </div>
+                <!-- Add more items as necessary -->
+            </div>
+            <centre><button class="beer-finder-btn" aria-label="Find Beer">Beer Finder</button></centre>
+        </div>
+    </section>
+    <section class="dfg">
+        <section class="beer-section1">
+            <h2>BEER</h2>
+            <ul>
+                <li>Nitro Stout</li>
+                <li>India Pale Ale</li>
+                <li>Tint-In-Wit</li>
+                <li>Basmati Blonde</li>
+                <li>Red Ale</li>
+                <li>Hefeweizen</li>
+                <li>Lager</li>
+            </ul>
+        </section>
+        
+        <section class="restaurants-section">
+            <h2>RESTAURANTS</h2>
+            <ul>
+                <li>Toit Bangalore - Mahadevapura</li>
+                <li>Toit Bangalore - Indiranagar</li>
+                <li>Toit Pune</li>
+                <li>Toit Mumbai</li>
+            </ul>
+        </section>
+        
+        <section class="company-section">
+            <h2>COMPANY</h2>
+            <ul>
+                <li>About</li>
+                <li>Food</li>
+                <li>Breweries</li>
+                <li>Partnerships</li>
+                <li>Partner Bars & MRP Stores</li>
+                <li>Blog</li>
+                <li>Contact</li>
+                <li>Privacy</li>
+            </ul>
+            
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>  
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </section>
+        
+        <section class="contact-section">
+            <h2>TOIT BANGALORE - MAHADEVAPURA</h2>
+            <p>Email: toitblr.east@toit.in</p>
+        
+            <h2>TOIT BANGALORE - INDIRANAGAR</h2>
+            <p>Email: toitblr@toit.in</p>
+        
+            <h2>TOIT PUNE</h2>
+            <p>Email: toitpune@toit.in</p>
+        
+            <h2>TOIT MUMBAI</h2>
+            <p>Email: toitmumbai@toit.in</p>
+        </section>
+        </section>
+        <footer>
+            <p>&copy; Copyright 2023 www.toit.in</p>
+            <p>Powered by Analyse Digital</p>
+        </footer>
+        
+</body>
+</html>

@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+  
+    color: #eadfdd;
+    overflow-x: hidden;
+}
+.bc{
+    width: 100%;
+    background-size: cover;
+}
+/* Header Styling */
+header {
+    background-color: rgba(63, 59, 59, 0.7);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 150px;
+}
+
+.beer-finder {
+    font-family: "Bitter", serif;
+    background-color: #f8e6d0;
+    color: #6e100f;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reservations {
+    display: flex;
+    align-items: center;
+}
+
+.res {
+    font-family: "Bitter", serif;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 1px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 20;
+}
+
+.sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color:maroon;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #b30000;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    color: #6e100f;
+}
+.dropdown-btn {
+    display: block;
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    color: #333;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #800000; /* Matching color */
+    color: white;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+.tint-section {
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.tint-image img {
+    height: 100%;
+    max-height: 600px;
+    width: auto;
+}
+
+.tint-description {
+    font-family: "Arvo", serif;
+    flex: 1;
+    /* max-width: 60; */
+    padding-left: 40px;
+    
+}
+
+.tint-description h1 {
+    font-family: "Bitter", serif;
+    color: #8B0000;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tint-description h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tint-description p {
+    font-family: "Arvo", serif;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.tint-details {
+    font-family: "Arvo", serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 30px;
+    border-top: 1px solid #8B0000;
+    padding: 30px;
+}
+
+.tint-details div {
+    max-width: 200px;
+}
+
+.tint-details h3 {
+    color: #8B0000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tint-details p {
+    font-family: "Arvo", serif;
+    color: #333;
+    font-size: 16px;
+}
+.tint-width{
+    width: 150px;
+}
+.background-video {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+/* Toit Everywhere Section */
+.toit-everywhere-section {
+    background-image: url('img and video/ash-color-gradient-background-wallpaper-260nw-2271490113.webp'); /* Background image */
+    background-size: cover; /* Cover the section with the background image */
+    background-position: center; /* Center the background image */
+    padding: 60px 20px; /* Padding */
+    color: #fff; /* Text color */
+    text-align: center; /* Center text */
+}
+
+.toit-title {
+    color: #6e100f; /* Title color */
+    font-size: 48px; /* Title font size */
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.toit-subtitle {
+    color: black; /* Subtitle color */
+    font-size: 24px; /* Subtitle font size */
+    margin-bottom: 30px; /* Space below subtitle */
+}
+
+.toit-gallery {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items */
+    margin-bottom: 30px; /* Space below gallery */
+}
+
+.toit-item {
+    margin: 0 15px; /* Space between items */
+    text-align: center; /* Center-align text under each item */
+    position: relative; /* For positioning of the icon */
+    border: 2px solid rgb(173, 155, 155); /* Border around items */
+    background-color: #f4f4f4; /* Background color for boxes */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the item */
+}
+
+.toit-img {
+    width: 500px; /* Set width for beer images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.toit-name {
+    color: #6e100f; /* Name color */
+    margin-top: 10px; /* Space between image and name */
+    font-size: 18px; /* Font size for beer name */
+    display: flex; /* Use flex for icon and text alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.toit-icon {
+    width: 30px; /* Set width for small icon */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.toit-content {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align items horizontally */
+    text-align: center; /* Center text */
+}
+
+.beer-finder-btn {
+    background-color: #f8e6d0; /* Button color */
+    color: #6e100f; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 20px; /* Rounded corners */
+    border: none; /* No border */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold; /* Bold text */
+    margin-top: 30px; /* Space above button */
+    display: block; /* Ensures it's treated as a block element */
+    /* Additional margin to ensure it is centered properly */
+    margin-left: auto; /* Centering with margin */
+    margin-right: auto; /* Centering with margin */
+}
+/* Main container styling */
+.dfg{
+    background-color: #4b0e03;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+/* Section styles for right-to-left alignment */
+.beer-section1, .restaurants-section, .company-section, .contact-section {
+    background-color: #4b0e03;
+    color: #4b0e03;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Specific Styling for Sections */
+.beer-section1 h2,
+.restaurants-section h2,
+.company-section h2,
+.contact-section h2 {
+    color: #a49999;
+    padding-bottom: 10px;
+}
+
+/* Styling for list items */
+.beer-section1 ul li,
+.restaurants-section ul li,
+.company-section ul li,
+.contact-section p {
+    color: #988b8b;
+    list-style: none;
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #ccc;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: #4b0e03;
+    color: #fff;
+    padding: 10px;
+}

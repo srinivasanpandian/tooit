@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #eadfdd;
+    overflow-x: hidden;
+}
+
+header {
+    background: transparent;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.section {
+    background-image: url('img and video/ash-color-gradient-background-wallpaper-260nw-2271490113.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 50px;
+    text-align: center;
+    color: #333;
+}
+
+.section-title {
+    font-family: "Bitter", serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #360404;
+    letter-spacing: 2px;
+}
+
+.section-text p {
+    font-family: "Arvo", serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Charity Section */
+.charity-section {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f8f8f8;
+    padding: 40px;
+    gap: 20px;
+}
+
+.content {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.content h1 {
+    font-family: "Bitter", serif;
+    font-size: 2.5rem;
+    color: #8B0000;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-family: "Arvo", serif;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Ladder Image Layout */
+.ladder-image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.ladder-image {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image1 { margin-top: 0px; margin-left: 0px; }
+.image2 { margin-top: 30px; margin-left: 30px; }
+.image3 { margin-top: 60px; margin-left: 60px; }
+
+/* Hover effect for charity images */
+.ladder-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+/* Header Styling */
+header {
+    background: transparent;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 150px;
+}
+
+.beer-finder {
+    font-family: "Bitter", serif;
+    background-color: #f8e6d0;
+    color: #6e100f;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reservations {
+    display: flex;
+    align-items: center;
+}
+
+.res {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 1px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 20;
+}
+
+.sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color:maroon;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #b30000;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    color: #6e100f;
+}
+.dropdown-btn {
+    display: block;
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    color: #333;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;                                                                          
+    background-color: #800000; /* Matching color */
+    color: white;
+}                                                                                     
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}.footer-section {
+    background-color: #7a0000;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.newsletter {
+    margin-bottom: 30px;
+}
+
+.newsletter-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.newsletter-input {
+    padding: 10px;
+    width: 250px;
+    max-width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    margin-right: 10px;
+    color: #7a0000;
+}
+
+.newsletter-button {
+    background-color: #ffffff;
+    color: #7a0000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.footer-content div {
+    margin: 10px;
+    max-width: 200px;
+}
+
+.beer-title, .restaurant-title, .company-title, .contact-title {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.beer1, .beer2, .beer3, .beer4, .beer5, .beer6, .beer7,
+.restaurant1, .restaurant2, .restaurant3, .restaurant4, .restaurant5, .restaurant6,
+.company1, .company2, .company3, .company4, .company5, .company6, .company7, .company8,
+.contact1, .contact2, .contact3, .contact4, .contact5, .contact6, .contact7, .contact8 {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content p a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-content p a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-bottom a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #ffcc00;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.brewery-tour {
+    background-color:#4b0e03; /* Dark background color */
+    padding: 50px 0; /* Adjust padding as needed */
+    text-align: center;
+    text-size-adjust: auto;
+}
+
+.brewery-tour .image-container {
+    margin-bottom: 20px;
+    background-size: cover;
+}
+
+.brewery-tour .image-container img {
+    width: 100%; /* Make the image responsive */
+    max-width: 800px; /* Set a maximum width */
+}
+
+.brewery-tour .text-container p {
+    color: #fff; /* White text color */
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.brewery-tour .brewery-tour-button {
+    background-color: #f00; /* Red button color */
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.brewery-tour .brewery-tour-button:hover {
+    background-color: #d00; /* Darker red on hover */
+}
+/* Centered Heading */
+.centered-heading {
+    text-align: center;
+    font-size: 2em;
+    color: #e0d6d5; /* Example color, adjust as needed */
+    margin-bottom: 20px;
+}
+
+/* Layout for Info Section */
+.info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    /* background-color: #f4f4f4; Optional background color */
+}
+
+/* Left Text Styling */
+.left-text {
+    text-align: center;
+    max-width: 400px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.know-more-btn:hover {
+    background-color: #6b1a0a;
+}
+
+/* Image Row Styling */
+.image-row {
+    display: flex;
+    gap: 15px; /* Adjust gap between images */
+    justify-content: center;
+}
+
+.small-img {
+    width: 150px; /* Adjust image width as needed */
+    height: auto;
+    border-radius: 5px; /* Optional: Adds a slight border radius to images */
+}
+.blog-post {
+    display: flex;
+    flex-wrap: nowrap;  /* Don't allow wrapping, force items to be in a single row */
+    justify-content: space-between;
+    gap: 20px; /* Add gap between blog posts */
+}
+
+.post {
+    flex: 0 0 22%; /* Set a fixed width for each post (make them smaller) */
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text inside each post */
+}
+
+.post h2 {
+    color: black;
+    font-size: 16px; /* Adjust font size */
+    margin-bottom: 10px;
+}
+
+.post p {
+    color: black;
+    font-size: 12px; /* Make the text a bit smaller */
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.post-image {
+    width: 100%; /* Ensure the image takes up full width of the post */
+    height: auto; /* Maintain image aspect ratio */
+    max-height: 150px; /* Limit the height of the images to keep them small */
+    margin-bottom: 15px; /* Space between image and text */
+    border-radius: 5px;
+}
+.footer1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: maroon;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.copyright1, .powered-by1, .social-icons1 {
+    font-size: 12px;
+    margin: 0;
+}
+
+.powered-by1 a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.social-icons1 {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.social-icon1 img {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon1 img:hover {
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+

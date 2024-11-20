@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="blog.css">
+    <title>Blog</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="header-container" aria-label="Main Navigation">
+            <!-- Beer Finder Button -->
+            <a href="https://toit.in/beer-finders/" target="_blank">
+                <button class="beer-finder" aria-label="Find Beer Near You">BEER FINDER</button>
+            </a>
+            
+
+            <!-- Center Logo -->
+            <img src="img and video/TO-Logo-CI-300-x-300-1.png" alt="Toit Logo" class="logo">
+
+            <!-- Reservations Section -->
+            <div class="reservations">
+                <span class="res">RESERVATIONS</span>
+                <div class="menu-icon" onclick="toggleMenu()" aria-label="Open Sidebar Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- Sidebar Menu -->
+<div id="sidebar" class="sidebar" aria-label="Sidebar Navigation">
+    <button class="closebtn" onclick="toggleMenu()" aria-label="Close Sidebar Menu">&times;</button>
+    <a href="about.html">About</a>
+    <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown('beer-dropdown')">Beer ▼</button>
+        <div id="beer-dropdown" class="dropdown-content">
+            <a href="tint-in.html">Tint-In-Wit</a>
+            <a href="nitro.html">Nitro Stout</a>
+            <a href="basamati.html">Basmati Blonde</a>
+            <a href="hefeweizen.html">Hefeweizen</a>
+            <a href="redale.html">Red Ale</a>
+            <a href="indianpaleale.html">Indian Pale Ale</a>
+            <a href="toitlarger.html">Toit Lager</a>
+        </div>
+    </div>
+    <a href="cider.html">Cider</a>
+    <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown('beer-dropdown1')">Brepups & Taprooms ▼</button>
+        <div id="beer-dropdown1" class="dropdown-content">
+            <a href="toitbanglore1.html">Bangalore 1</a>
+            <a href="toitbanglore2.html">Banglore 2</a>
+            <a href="mumbai.html">Mumbai</a>
+            <a href="pune.html">Pune</a>
+        </div>
+    </div>
+    <a href="">Breweries</a>
+    <a href="partnership.html">Partnerships</a>
+    <a href="blog.html">Blog</a>
+    <a href="">Brewery Tour</a>
+    <a href="#"></a>
+    <!-- Add more links as necessary -->
+</div>
+<section>
+    <div class="bc">
+         <img src="img and video/Group-685-1.jpg" width="100%">
+    
+</section> 
+
+<section class="blog-post">
+    <!-- First Blog Post -->
+    <div class="post">
+        <img src="img and video/dog.jpg" alt="Blog 1 Image" class="post-image">
+        <h2>PET-A-TÉTE</h2>
+        <p>Tell us a short story about Grace and how she made her presence in your life? Grace is a rescue. Continue...</p>
+        <a href="#" class="read-more">READ MORE</a>
+    </div>
+
+    <!-- Second Blog Post -->
+    <div class="post">
+        <img src="img and video/couple.jpg" alt="Blog 2 Image" class="post-image">
+        <h2>MUG HOLDERS OF THE MONTH</h2>
+        <p>At Toit, our customers have always been our primary focus. They're the ones who bring life to the place...</p>
+        <a href="#" class="read-more">READ MORE</a>
+    </div>
+
+    <!-- Third Blog Post -->
+    <div class="post">
+        <img src="img and video/chef.jpg" alt="Blog 3 Image" class="post-image">
+        <h2>NEW MERCHANDISE DROP!</h2>
+        <p>Our latest collection has arrived! Check out the new designs and find your perfect fit...</p>
+        <a href="#" class="read-more">READ MORE</a>
+    </div>
+
+    <!-- Fourth Blog Post -->
+    <div class="post">
+        <img src="img and video/couple2.jpg" alt="Blog 4 Image" class="post-image">
+        <h2>THE STORY BEHIND THE LOGO</h2>
+        <p>Ever wondered about the meaning of our logo? Here’s the story behind it...</p>
+        <a href="#" class="read-more">READ MORE</a>
+    </div>
+</section>
+
+<section class="blog-post">
+    <!-- First Blog Post -->
+    <div class="post">
+        <img src="img and video/o5.jpg" alt="Blog 1 Image" class="post-image">
+        <h2>THE CURIOUS CASE OF CUDIX</h2>
+        <p>The rumors of the origins of kudix have been afloat since the time we started sendingit..</p>
+        <a href="#" class="read-more">READ MORE</a>
+    </div>
+
+    <!-- Second Blog Post -->
+    <div class="post">
+        <img src="img and video/o6.jpg" alt="Blog 2 Image" class="post-image">
+        <h2>KNOW YOUR LARGER</h2>
+        <p>At Toit, our customers have always been our primary focus. They're the ones who bring life to the place...</p>
+        <a href="#" class="read-more">READ MORE</a>
+    </div>
+
+    <!-- Third Blog Post -->
+    <div class="post">
+        <img src="img and video/o7.jpg" alt="Blog 3 Image" class="post-image">
+        <h2>BEHIND THE BREWPUPS SCENES</h2>
+        <p>Our latest collection has arrived! Check out the new designs and find your perfect fit...</p>
+        <a href="#" class="read-more">READ MORE</a>
+    </div>
+
+    <!-- Fourth Blog Post -->
+    <div class="post">
+        <img src="img and video/o8.jpg" alt="Blog 4 Image" class="post-image">
+        <h2>TOIT'S BEER FESTIVAL CALENDER</h2>
+        <p>Ever wondered about the meaning of our logo? Here’s the story behind it...</p>
+        <a href="#" class="read-more">READ MORE</a>
+    </div>
+</section>
+
+<section class="blog-post">
+    <!-- First Blog Post -->
+    <div class="post">
+        <img src="img and video/o9.jpg" alt="Blog 1 Image" class="post-image">
+        <h2>PET-A-TÉTE</h2>
+        <p>Tell us a short story about Grace and how she made her presence in your life? Grace is a rescue. Continue...</p>
+        <a href="#" class="read-more">READ MORE</a>
+    </div>
+
+    <!-- Second Blog Post -->
+    <div class="post">
+        <img src="img and video/o10.jpg" alt="Blog 2 Image" class="post-image">
+        <h2>MUG HOLDERS OF THE MONTH</h2>
+        <p>At Toit, our customers have always been our primary focus. They're the ones who bring life to the place...</p>
+        <a href="#" class="read-more">READ MORE</a>
+    </div>
+
+    <!-- Third Blog Post -->
+    <div class="post">
+        <img src="img and video/o11.jpg " alt="Blog 3 Image" class="post-image">
+        <h2>NEW MERCHANDISE DROP!</h2>
+        <p>Our latest collection has arrived! Check out the new designs and find your perfect fit...</p>
+        <a href="#" class="read-more">READ MORE</a>
+    </div>
+
+    <!-- Fourth Blog Post -->
+    <div class="post">
+        <img src="img and video/o12.jpg" alt="Blog 4 Image" class="post-image">
+        <h2>MUG HOLDER PF THE MONTH</h2>
+        <p>Ever wondered about the meaning of our logo? Here’s the story behind it...</p>
+        <a href="#" class="read-more">READ MORE</a>
+    </div>
+</section>
+<section class="footer-section">
+    <img src="img and video/bo.png" alt="Featured Image" class="featured-img">
+    <div class="newsletter">
+        <h2 class="newsletter-title">DOWNLOAD NEWSLETTER</h2>
+        <input type="email" class="newsletter-input" placeholder="Email Address">
+        <button class="newsletter-button">DOWNLOAD</button>
+    </div>
+    <div class="footer-content">
+        <div class="beer">
+            <h3 class="beer-title">BEER</h3>
+            <p class="beer1"><a href="nitro.html">Nitro Stout</a></p>
+            <p class="beer2"><a href="indianpaleale.html">India Pale Ale</a></p>
+            <p class="beer3"><a href="tint-in.html">Tint-In-Wit</a></p>
+            <p class="beer4"><a href="basamati.html">Basmati Blonde</a></p>
+            <p class="beer5"><a href="redale.html">Red Ale</a></p>
+            <p class="beer6"><a href="hefeweizen.html">Hefeweizen</a></p>
+            <p class="beer7"><a href="toitlarger.html">Toit Lagerer</a></p>
+        </div>
+        
+        <div class="restaurants">
+            <h3 class="restaurant-title">RESTAURANTS</h3>
+            <p><a href="toitbanglore2.html">Toit Bangalore - Mahadevapura</a></p>
+            <p><a href="toitbanglore1.html">Toit Bangalore - Indiranagar</a></p>
+            <p><a href="pune.html">Toit Pune</a></p>
+            <p><a href="mumbai.html">Toit Mumbai</a></p>
+            <p><a href="https://toit.in/beer-finders/">BEER FINDER</a></p>
+            <p><a href="https://toit.in/breweries/">BREWERY TOUR</a></p>
+        </div>
+        <div class="company">
+            <h3 class="company-title">COMPANY</h3>
+            <p class="company1">About</p>
+            <p class="company2">Food</p>
+            <p class="company3">Breweries</p>
+            <p class="company4">Partnerships</p>
+            <p class="company5">Partner Bars & MRP Stores</p>
+            <p class="company6">Blog</p>
+            <p class="company7">Contact</p>
+            <p class="company8">Privacy</p>
+        </div>
+        <div class="contact">
+            <h3 class="contact-title">CONTACT</h3>
+            <p class="contact1">TOIT BANGALORE - MAHADEVAPURA</p>
+            <p class="contact2">Email: toitblr.east@toit.in</p>
+            <p class="contact3">TOIT BANGALORE - INDIRANAGAR</p>
+            <p class="contact4">Email: toitblr@toit.in</p>
+            <p class="contact5">TOIT PUNE</p>
+            <p class="contact6">Email: toitpune@toit.in</p>
+            <p class="contact7">TOIT MUMBAI</p>
+            <p class="contact8">Email: toitmumbai@toit.in</p>
+        </div>
+    </div>
+    
+</section>
+<footer class="footer1">
+    <div class="copyright1">
+        © Copyright 2023 www.toit.in
+    </div>
+    <div class="powered-by1">
+        Powered by <a href="#">Analyse Digital</a>
+    </div>
+    <div class="social-icons1">
+        <a href="#" class="social-icon1">
+            <img src="img and video/facebook.png" alt="Facebook Icon">
+        </a>
+        <a href="#" class="social-icon1">
+            <img src="img and video/x.png" alt="Twitter Icon">
+        </a>
+        <a href="#" class="social-icon1">
+            <img src="img and video/instagram.png" alt="Instagram Icon">
+        </a>
+        <a href="#" class="social-icon1">
+            <img src="img and video/youtube.png" alt="YouTube Icon">
+        </a>
+        <a href="#" class="social-icon1">
+            <img src="img and video/linkedin.png" alt="LinkedIn Icon">
+        </a>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

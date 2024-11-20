@@ -1,0 +1,90 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+}
+
+.logo {
+    margin-right: auto; /* Pushes logo to the far left */
+}
+
+.logo img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
+
+nav {
+    margin-left: auto; /* Pushes nav to the far right */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.cta-button {
+    background-color: #ffcc00;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: #1a1a1a;
+}
+
+
+/* Hero section styling */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.real-apple-text {
+    width: 350px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.hero-text h3 {
+    font-size: 3em;
+    color: #ffcc00;
+}
+
+.hero-image img {
+    width: 300px;
+    height: auto;
+}

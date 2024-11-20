@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header>
+        <nav class="header-container" aria-label="Main Navigation">
+            <!-- Beer Finder Button -->
+            <button class="beer-finder" aria-label="Find Beer Near You">BEER FINDER</button>
+
+            <!-- Center Logo -->
+            <img src="img and video/TO-Logo-CI-300-x-300-1.png" alt="Toit Logo" class="logo">
+
+            <!-- Reservations Section -->
+            <div class="reservations">
+                <span class="res">RESERVATIONS</span>
+                <div class="menu-icon" onclick="toggleMenu()" aria-label="Open Sidebar Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="sidebar" aria-label="Sidebar Navigation">
+        <button class="closebtn" onclick="toggleMenu()" aria-label="Close Sidebar Menu">&times;</button>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown('beer-dropdown')">Beer ▼</button>
+            <div id="beer-dropdown" class="dropdown-content">
+                <a href="tint-in.html">Tint-In-Wit</a>
+                <a href="nitro.html">Nitro Stout</a>
+                <a href="basamati.html">Basmati Blonde</a>
+                <a href="hefeweizen.html">Hefeweizen</a>
+                <a href="redale.html">Red Ale</a>
+                <a href="indianpaleale.html">Indian Pale Ale</a>
+                <a href="toitlarger.html">Toit Lager</a>
+            </div>
+        </div>
+        <a href="cider.html">Cider</a>
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown('beer-dropdown')">Brepups & Taprooms ▼</button>
+            <div id="beer-dropdown" class="dropdown-content">
+                <a href="toitbanglore2.html">Bangalore 2</a>
+                <a href="toitbanglore2.html">Banglore 1</a>
+                <a href="mumbai.html">Mumbai</a>
+                <a href="pune.html">Pune</a>
+            </div>
+        </div>
+        <a href="">Breweries</a>
+        <a href="partnership.html">Partnerships</a>
+        <a href="blog.html">Blog</a>
+        <a href="">Brewery Tour</a>
+        <a href="#"></a>
+        <!-- Add more links as necessary -->
+    </div>
+    <main>
+        <section>
+            <div class="bd">
+                 <img src="img and video/about.jpg" width="100%" height="100%">
+            
+        </section>
+    <section class="section">
+        <div class="section-content">
+            <div class="section-header">
+                <p class="section-title">WE'VE BEEN SENDING IT SINCE 2010</p>
+            </div>
+            <div class="section-text">
+                <p>We set out with a simple vision of creating world-class craft beer culture. With the promise of some excellent brews, fabulous food, and an inclusive brewpub experience.</p>
+                <p>Starting out on 100ft Road in Bangalore, we made our way to Mumbai and Pune, setting up breweries in Sanaswadi (Maharashtra) and Nelamangala (Karnataka), and a cidery in Himachal Pradesh along the way.</p>
+                <p>We decided to start bottling our beloved Tint-In-Wit and our Nitro Stout, India's first nitrogenated beer. We've been sending the bottled brews out (well, in Karnataka for now) to share that extension of the Toit experience with craft beer lovers.</p>
+                <p>And we're dipping our toe into the cider pool too, with cans of Stray Apple Craft Cider from our cidery in Himachal Pradesh.</p>
+                <p>For over a decade, we've created neighbourhood spaces (and now pieces of that space in a bottle or can) where you can unwind and be yourself – whether you're there to celebrate, lift your spirits, or just get tight!</p>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="section-content">
+            <div class="section-header">
+                <p class="section-title">CORPORATE SOCIAL RESPONSIBILITY</p>
+            </div>
+            <div class="section-text">
+                <p><bold>What makes our beer differnt?</bold></p>
+                <p>Apart from the essential four (hops, water, yeast, and malt), it contains one more ingredient that’s just as essential to us: our beer has heart.
+                    Since our inception, we have been actively involved with a variety of NGOs and charitable organisations with the hope to continue helping them in their journey of making this world a better and brighter place.</p>
+                <p>We also partner with organisations that support athletes and use the spirit of sporting events to support various causes. We’ve had the opportunity to support organisations that work across education and outreach initiatives, music programmes, livelihood and skills development, animal rescue and rehabilitation, and a host of other areas.</p>
+                <p>Year on year, these acts of giving back continue to be possible with the support of our patrons and organisations like these. A big Team Toit thank you!</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="diagonal-section">
+            <!-- Replace 'image1.jpg', 'image2.jpg', etc. with your actual image sources -->
+            <img src="img and video/child-welfare.png" alt="Image 1" class="image1">
+            <img src="img and video/animal-rehabitation.png" alt="Image 2" class="image2">
+            <img src="img and video/sports-foundation.png" alt="Image 3" class="image3">
+            <img src="img and video/special-uplifment.png" alt="Image 4" class="image4">
+        </div>
+    </section>
+    <section class="charity-section">
+        <div class="content">
+            <h1>CHARITY OF THE MONTH</h1>
+            <p>Each month we partner with a different NGO to contribute proceeds...</p>
+        </div>
+        <div class="ladder-image-container">
+            <img src="img and video/October-2023.png" alt="Charity Image 1" class="ladder-image image1">
+            <img src="img and video/August-2023.png" alt="Charity Image 2" class="ladder-image image2">
+            <img src="img and video/November-2023.png" alt="Charity Image 3" class="ladder-image image3">
+        </div>
+    </section>
+
+</main>    
+<section class="footer-section">
+    <div class="newsletter">
+        <h2 class="newsletter-title">DOWNLOAD NEWSLETTER</h2>
+        <input type="email" class="newsletter-input" placeholder="Email Address">
+        <button class="newsletter-button">DOWNLOAD</button>
+    </div>
+    <div class="footer-content">
+        <div class="beer">
+            <h3 class="beer-title">BEER</h3>
+            <p class="beer1"><a href="nitro.html">Nitro Stout</a></p>
+            <p class="beer2"><a href="indianpaleale.html">India Pale Ale</a></p>
+            <p class="beer3"><a href="tint-in.html">Tint-In-Wit</a></p>
+            <p class="beer4"><a href="basamati.html">Basmati Blonde</a></p>
+            <p class="beer5"><a href="redale.html">Red Ale</a></p>
+            <p class="beer6"><a href="hefeweizen.html">Hefeweizen</a></p>
+            <p class="beer7"><a href="toitlarger.html">Toit Lagerer</a></p>
+        </div>
+        
+        <div class="restaurants">
+            <h3 class="restaurant-title">RESTAURANTS</h3>
+            <p class="restaurant1">Toit Bangalore - Mahadevapura</p>
+            <p class="restaurant2">Toit Bangalore - Indiranagar</p>
+            <p class="restaurant3">Toit Pune</p>
+            <p class="restaurant4">Toit Mumbai</p>
+            <p class="restaurant5">BEER FINDER</p>
+            <p class="restaurant6">BREWERY TOUR</p>
+        </div>
+        <div class="company">
+            <h3 class="company-title">COMPANY</h3>
+            <p class="company1">About</p>
+            <p class="company2">Food</p>
+            <p class="company3">Breweries</p>
+            <p class="company4">Partnerships</p>
+            <p class="company5">Partner Bars & MRP Stores</p>
+            <p class="company6">Blog</p>
+            <p class="company7">Contact</p>
+            <p class="company8">Privacy</p>
+        </div>
+        <div class="contact">
+            <h3 class="contact-title">CONTACT</h3>
+            <p class="contact1">TOIT BANGALORE - MAHADEVAPURA</p>
+            <p class="contact2">Email: toitblr.east@toit.in</p>
+            <p class="contact3">TOIT BANGALORE - INDIRANAGAR</p>
+            <p class="contact4">Email: toitblr@toit.in</p>
+            <p class="contact5">TOIT PUNE</p>
+            <p class="contact6">Email: toitpune@toit.in</p>
+            <p class="contact7">TOIT MUMBAI</p>
+            <p class="contact8">Email: toitmumbai@toit.in</p>
+        </div>
+    </div>
+    
+</section>
+<footer class="footer1">
+    <div class="copyright1">
+        © Copyright 2023 www.toit.in
+    </div>
+    <div class="powered-by1">
+        Powered by <a href="#">Analyse Digital</a>
+    </div>
+    <div class="social-icons1">
+        <a href="#" class="social-icon1">
+            <img src="img and video/facebook.png" alt="Facebook Icon">
+        </a>
+        <a href="#" class="social-icon1">
+            <img src="img and video/x.png" alt="Twitter Icon">
+        </a>
+        <a href="#" class="social-icon1">
+            <img src="img and video/instagram.png" alt="Instagram Icon">
+        </a>
+        <a href="#" class="social-icon1">
+            <img src="img and video/youtube.png" alt="YouTube Icon">
+        </a>
+        <a href="#" class="social-icon1">
+            <img src="img and video/linkedin.png" alt="LinkedIn Icon">
+        </a>
+    </div>
+</footer>
+    <script src="about.js"></script>
+</body>
+</html>
